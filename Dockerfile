@@ -27,4 +27,5 @@ RUN wget "$APACHE_MIRROR/pub/apache/kafka/$KAFKA_VERSION/$KAFKA_BINARY_VERSION.t
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/kafka/bin
 ENV CLASSPATH=/kafka-connect-s3-0.0.3-jar-with-dependencies.jar
 
+RUN chmod ugo+rx /configure_s3_sink.sh
 CMD ["/configure_s3_sink.sh"]
