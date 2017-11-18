@@ -26,7 +26,6 @@ chmod -R 600 /home/docker/.aws
 chown -R docker /home/docker/.aws
 
 # run the S3 sink
-exec sudo -u docker \
-     CLASSPATH=/kafka/kafka-connect-s3-0.0.3-jar-with-dependencies.jar \
+exec CLASSPATH=/kafka/kafka-connect-s3-0.0.3-jar-with-dependencies.jar \
      /kafka/bin/connect-standalone.sh connect-worker.properties \
      connect-s3-sink.properties
