@@ -27,4 +27,4 @@ chown -R docker /home/docker/.aws
 
 # run the S3 sink
 export CLASSPATH=/kafka/kafka-connect-s3-0.0.3-jar-with-dependencies.jar
-exec /kafka/bin/connect-standalone.sh connect-worker.properties connect-s3-sink.properties
+exec /kafka/bin/connect-standalone.sh /kafka/connect-worker.properties /kafka/connect-s3-sink.properties
